@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Tienda Online</title>
@@ -81,13 +83,14 @@
       border-radius: 10px;
       text-align: center;
     }
-    .texto-central2 {
-      font-size: 2rem;
+   
+       .texto-central3 {
+      font-size: 5rem;
       color: white;
       background-color: rgba(0,0,0,0.6);
-      padding: 20px 40px;
+      padding: 10px 40px;
       border-radius: 10px;
-      text-align: left;
+      text-align: center;
     }
 
     .boton-rojo {
@@ -100,7 +103,33 @@
       border-radius: 4px;
       font-family: 'Anton', sans-serif;
       cursor: pointer;
+      transition: all 0.3s ease; 
     }
+    .boton-rojo:hover {
+      background-color: #921d1d;
+      color: rgb(255, 255, 255);
+      transform: translateY(-5px);
+      transition: transform 0.4s ease;
+     } 
+     .boton-sec3 {
+     margin-top: 20px;
+     background-color: transparent;
+     color: white;
+     font-size: 1.5rem;
+     padding: 12px 70px; 
+     border: 2px solid white;
+     border-radius: 50px; 
+     font-family: 'Anton', sans-serif;
+     cursor: pointer;
+     
+    }
+    .boton-sec3:hover {
+      background-color: white;
+      color: gray;
+      transform: translateY(-5px);
+      transition: transform 0.4s ease;
+      
+     } 
 
     /* Contenedor dropdown */
     .dropdown {
@@ -127,7 +156,7 @@
       padding: 10px 15px;
       text-decoration: none;
       display: block;
-      font-size: 20px;
+      font-size: 20px; 
       font-family: 'Anton', sans-serif;
     }
 
@@ -145,14 +174,31 @@
     gap: 20px;
     padding: 20px;
   }
+     .catalogo1 {
+   display: flex;
+  justify-content: center;   /* Centra horizontalmente */
+  align-items: center;       /* Centra verticalmente si hay altura */
+  gap: 20px;
+  padding: 150px;
+  }
 
   .producto {
-    border: 1px solid #ccc;
+    border: 1px solid transparent;
     border-radius: 10px;
     padding: 15px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: rgba(25, 25, 10, 0.5);
     transition: transform 0.3s ease;
+   
+  }
+  .producto1 {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(25, 25, 10, 0.0);
+    transition: transform 0.3s ease;
+   
   }
 
   .producto:hover {
@@ -160,21 +206,19 @@
   }
 
   .producto img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-  }
+   display: block;
+   margin: 0 auto;
+   max-width: 500px; /* Ajusta el tamaño según lo que necesites */
+   padding: 20px 0; 
 
-  .producto h3 {
-    margin: 10px 0 5px;
-    font-size: 1.2em;
   }
 
   .producto p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 1.2em;
+    color: white ;
   }
+  
   </style>
 </head>
 
@@ -184,8 +228,7 @@
     <img src="imagenes/logo.png" alt="Logo de la tienda" class="logo">
     <nav>
       <a href="index.html"><button>Inicio</button></a>
-      <a href="#"><button>Iniciar Sesi&oacute;n</button></a>
-
+      <a href="pgInicio.html"><button>Iniciar Sesi&oacute;n</button></a>
       <div class="dropdown">
         <button>Cat&aacute;logo ▼</button>
         <div class="dropdown-content">
@@ -193,6 +236,7 @@
           <a href="catalogo.html#makita">Makita</a>
           <a href="#">Subcategoría 3</a>
           <a href="#">Subcategoría 4</a>
+          
         </div>
       </div>
 
@@ -208,47 +252,58 @@
 </div>
 
 <div class="seccion seccion2">
-  <div class="texto-central2">
-    ¡NUEVOS PRODUCTOS MILWAUKEE DISPONIBLES!
-  </div>
-
+ 
   <div class="catalogo">
     <div class="producto">
-      <img src="imagenes/milwaukee/herramienta1.png" alt="Producto 1">
-      <h3>Llave de Impacto</h3>
-      <p>$3,500 MXN</p>
+      <img src="imagenes/milwaukee/per.png" alt="Producto 1">
+      <p>PERFORACION</p>
     </div>
     <div class="producto">
-      <img src="imagenes/milwaukee/herramienta2.png" alt="Producto 1">
-      <h3>Llave de Impacto</h3> 
-      <p>$3,500 MXN</p>
+      <img src="imagenes/milwaukee/fij.png" alt="Producto 2">
+      <p>FIJACION</p>
     </div>
     <div class="producto">
-      <img src="imagenes/milwaukee/herramienta3.png" alt="Producto 1">
-      <h3>Llave de Impacto</h3>    
-      <p>$2,800 MXN</p>
+      <img src="imagenes/milwaukee/sierr.png" alt="Producto 3">
+      <p>SIERRAS</p>
     </div>
     <div class="producto">
-      <img src="imagenes/milwaukee/herramienta4.png" alt="Producto 1">
-      <h3>Llave de Impacto</h3>
-      <p>$2,400 MXN</p>
+      <img src="imagenes/milwaukee/sierra1.png" alt="Producto 4">
+      <p>CORTE</p>
     </div>
   </div>
 </div>
 
 <div class="seccion seccion3">
-  <div class="texto-central">
-  PROMOCIONES INCREIBLES EN HERRAMIENTAS ELÉCTRICAS!
+  <div class="texto-central3">
+    ELIGE TU MARCA FAVORITA!
+  </div>
+  <div class="catalogo1">
+    <div class="producto1">
+      <img src="imagenes/milwaukee/mil.png" alt="Producto 1">
+      <button class="boton-sec3">
+    <i class="fa-duotone fa-solid fa-bars"></i> MILWAUKEE
+    </button>
+    </div>
+    <div class="producto1">
+      <img src="imagenes/milwaukee/mak.png" alt="Producto 2">
+      <button class="boton-sec3">
+    <i class="fa-duotone fa-solid fa-bars"></i> MAKITA
+    </button>
+    </div>
+    <div class="producto1">
+      <img src="imagenes/milwaukee/dew.png" alt="Producto 3">
+      <button class="boton-sec3">
+    <i class="fa-duotone fa-solid fa-bars"></i> DEWALT
+    </button>
+    </div>
   </div>
 </div>
 
 <div class="seccion seccion4">
   <div class="texto-central">
-  CONTACTANIOS!
+    CONTACTANOS!
   </div>
 </div>
- 
-
 
 </body>
 
