@@ -74,7 +74,13 @@
     }
      .seccion4 {
       background-image: url('imagenes/fondo4.png');
+       height: 1000px;
     }
+     .seccion5 {
+      background-image: url('imagenes/fondo5.png');
+      height: 300px;
+    }
+
      .texto-central {
       font-size: 4rem;
       color: white;
@@ -88,9 +94,10 @@
       font-size: 5rem;
       color: white;
       background-color: rgba(0,0,0,0.6);
-      padding: 10px 40px;
-      border-radius: 10px;
+      padding: 40px 70px;
+      border-radius: 45px;
       text-align: center;
+       margin-left: 80px;
     }
 
     .boton-rojo {
@@ -131,14 +138,14 @@
       
      } 
 
-    /* Contenedor dropdown */
-    .dropdown {
+    
+    .desplegable {
       position: relative;
       display: inline-block;
     }
 
-    /* Contenido del dropdown oculto inicialmente */
-    .dropdown-content {
+    
+    .desplegable-opciones {
       display: none;
       position: absolute;
       background-color: #c42727;
@@ -150,8 +157,8 @@
       border: 2px solid white;
     }
 
-    /* Estilo de los links dentro del dropdown */
-    .dropdown-content a {
+   
+    .desplegable-opciones a {
       color: white;
       padding: 10px 15px;
       text-decoration: none;
@@ -160,12 +167,12 @@
       font-family: 'Anton', sans-serif;
     }
 
-    .dropdown-content a:hover {
+    .desplegable-opciones a:hover {
       background-color: #a02020;
     }
 
-    /* Mostrar el dropdown al hacer hover */
-    .dropdown:hover .dropdown-content {
+  
+    .desplegable:hover .desplegable-opciones {
       display: block;
     }
       .catalogo {
@@ -176,10 +183,19 @@
   }
      .catalogo1 {
    display: flex;
-  justify-content: center;   /* Centra horizontalmente */
-  align-items: center;       /* Centra verticalmente si hay altura */
+  justify-content: center;   
+  align-items: center;       
   gap: 20px;
   padding: 150px;
+  }
+   .catalogo2 {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px;                             
+  padding: 40px;                         
+  max-width: 1400px;                     
+  margin: 0 auto;
+  background: rgba(247, 10, 10, 0.5)
   }
 
   .producto {
@@ -200,6 +216,15 @@
     transition: transform 0.3s ease;
    
   }
+   .producto12 {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(25, 25, 10, 0.0);
+    transition: transform 0.3s ease;
+   
+  }
 
   .producto:hover {
     transform: scale(1.05);
@@ -208,7 +233,7 @@
   .producto img {
    display: block;
    margin: 0 auto;
-   max-width: 500px; /* Ajusta el tamaño según lo que necesites */
+   max-width: 500px; 
    padding: 20px 0; 
 
   }
@@ -229,18 +254,19 @@
     <nav>
       <a href="index.html"><button>Inicio</button></a>
       <a href="pgInicio.html"><button>Iniciar Sesi&oacute;n</button></a>
-      <div class="dropdown">
-        <button>Cat&aacute;logo ▼</button>
-        <div class="dropdown-content">
+     
+      <div class="desplegable">
+        <button onclick="location.href='catalogo.html'">Cat&aacute;logo ▼</button>
+        <div class="desplegable-opciones">
           <a href="catalogo.html">Milwaukee</a>
           <a href="catalogo.html#makita">Makita</a>
-          <a href="#">Subcategoría 3</a>
-          <a href="#">Subcategoría 4</a>
+          <a href="catalogo.html#dewalt">DeWalt</a>
           
         </div>
       </div>
+     
 
-      <a href="#"><button>Contacto</button></a>
+      <a href="contacto.html"><button>Contacto</button></a>
     </nav>
 
   </header>
@@ -280,31 +306,107 @@
   <div class="catalogo1">
     <div class="producto1">
       <img src="imagenes/milwaukee/mil.png" alt="Producto 1">
-      <button class="boton-sec3">
+       <button onclick="location.href='catalogo.html'" class="boton-sec3">
     <i class="fa-duotone fa-solid fa-bars"></i> MILWAUKEE
     </button>
     </div>
     <div class="producto1">
       <img src="imagenes/milwaukee/mak.png" alt="Producto 2">
-      <button class="boton-sec3">
+       <button onclick="location.href='catalogo.html#makita'" class="boton-sec3">
     <i class="fa-duotone fa-solid fa-bars"></i> MAKITA
     </button>
     </div>
     <div class="producto1">
       <img src="imagenes/milwaukee/dew.png" alt="Producto 3">
-      <button class="boton-sec3">
+      <button onclick="location.href='catalogo.html#dewalt'" class="boton-sec3">
     <i class="fa-duotone fa-solid fa-bars"></i> DEWALT
     </button>
     </div>
   </div>
 </div>
 
-<div class="seccion seccion4">
-  <div class="texto-central">
-    CONTACTANOS!
+ <div class="seccion seccion4">
+  <div class="catalogo2">
+    <div class="producto">
+      <img src="imagenes/milwaukee/cint.png" alt="Producto 1">
+      <p>Cinta de Medir Retráctil 25 Ft</p>
+      <p>$550 MXN</p>
+    </div>
+    <div class="producto">
+      <img src="imagenes/milwaukee/des.png" alt="Producto 2">
+      <p>Juego de 6 Destornilladores Milwaukee</p>
+      <p>$1,200 MXN</p>
+    </div>
+    <div class="producto">
+      <img src="imagenes/milwaukee/cut.png" alt="Producto 3">
+      <p>Cúter Milwaukee Retráctil</p>
+      <p>$350 MXN</p>
+    </div>
+    <div class="producto">
+      <img src="imagenes/milwaukee/ceg.png" alt="Producto 4">
+      <p>Segueta Milwaukee para Metal y Madera</p>
+      <p>$200 MXN</p>
+    </div>
+    <div class="producto">
+      <img src="imagenes/milwaukee/broc.png" alt="Producto 5">
+      <p>Broca Sierra Milwaukee (Hole Saw)</p>
+      <p>$450 MXN</p>
+    </div>
+    <div class="producto">
+      <img src="imagenes/milwaukee/chal.png" alt="Producto 6">
+      <p>Chaleco de Seguridad Milwaukee</p>
+      <p>$800 MXN</p>
+    </div>
+    <div class="producto">
+      <img src="imagenes/milwaukee/gorr.png" alt="Producto 7">
+      <p>Gorra Milwaukee</p>
+      <p>$300 MXN</p>
+    </div>
+    <div class="producto">
+      <img src="imagenes/milwaukee/guant.png" alt="Producto 8">
+      <p>Guantes de Seguridad Milwaukee</p>
+      <p>$400 MXN</p>
+    </div>
   </div>
 </div>
+<div class="seccion seccion5">
+ <footer style="background-color: #222; color: white; padding: 20px 0; text-align: center;">
+  <div style="max-width: 1000px; margin: auto; padding: 0 20px;">
+    
+    
+    <img src="imagenes/logo.png" alt="TorqueParts" style="height: 60px; margin-bottom: 10px;">
+    
+  
+    <div style="margin: 15px 0;">
+      <a href="https://www.facebook.com/TorqueParts" target="_blank" style="color: white; margin: 0 10px;">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" style="color: white; margin: 0 10px;">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://discord.com/" style="color: white; margin: 0 10px;">
+        <i class="fa-brands fa-discord"></i>
+      </a>
+      <a href="https://github.com/Fcobs/TiendaOnline" target="_blank" style="color: white; margin: 0 10px;">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://wa.me/5211234567890" target="_blank" style="color: white; margin: 0 10px;">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
 
+   
+    <div style="margin-bottom: 10px;">
+      <a href="index.html" style="color: white; margin: 0 10px; text-decoration: none;">Inicio</a>
+      <a href="catalogo.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">catalogo</a>
+      <a href="contacto.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Contacto</a>
+    </div>
+
+  
+    <p style="font-size: 14px; color: #ffffff;">© 2025 TorqueParts. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</div>
 </body>
 
 </html>

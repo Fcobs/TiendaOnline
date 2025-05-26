@@ -63,6 +63,40 @@
             border: 2px solid white;
         }
 
+        .desplegable {
+            position: relative;
+            display: inline-block;
+        }
+
+        .desplegable-opciones {
+            display: none;
+            position: absolute;
+            background-color: #c42727;
+            min-width: 160px;
+            z-index: 1001;
+            top: 100%;
+            left: 0;
+            flex-direction: column;
+            border: 2px solid white;
+        }
+
+        .desplegable-opciones a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            font-family: 'Anton', sans-serif;
+        }
+
+        .desplegable-opciones a:hover {
+            background-color: #a02020;
+        }
+
+        .desplegable:hover .desplegable-opciones {
+            display: block;
+        }
+
         .catalogo {
             max-width: 1200px;
             margin: 40px auto;
@@ -127,19 +161,19 @@
             text-align: center;
         }
 
+        .precio {
+            font-size: 1.3rem;
+            color: #c42727;
+            font-weight: bold;
+            text-align: center;
+        }
+
         .acciones {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 10px;
             margin-top: auto;
-        }
-
-        .precio {
-            font-size: 1.3rem;
-            color: #c42727;
-            font-weight: bold;
-            text-align: center;
         }
 
         .marca-logo {
@@ -157,44 +191,6 @@
             margin: 20px 0;
             background-color: white;
         }
-
-        /* Contenedor dropdown */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Contenido del dropdown oculto inicialmente */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #c42727;
-            min-width: 160px;
-            z-index: 1001;
-            top: 100%;
-            left: 0;
-            flex-direction: column;
-            border: 2px solid white;
-        }
-
-        /* Estilo de los links dentro del dropdown */
-        .dropdown-content a {
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            display: block;
-            font-size: 20px;
-            font-family: 'Anton', sans-serif;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #a02020;
-        }
-
-        /* Mostrar el dropdown al hacer hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
     </style>
 </head>
 
@@ -204,25 +200,24 @@
         <img src="imagenes/logo.png" alt="Logo de la tienda" class="logo">
         <nav>
             <a href="index.html"><button>Inicio</button></a>
-            <a href="#"><button>Iniciar Sesi&oacute;n</button></a>
+            <a href="pgInicio.html"><button>Iniciar Sesi&oacute;n</button></a>
 
-            <div class="dropdown">
+            <div class="desplegable">
                 <button>Cat&aacute;logo ▼</button>
-                <div class="dropdown-content">
+                <div class="desplegable-opciones">
                     <a href="catalogo.html">Milwaukee</a>
-                    <a href="#makita">Makita</a>
-                    <a href="#">Subcategoría 3</a>
-                    <a href="#">Subcategoría 4</a>
+                    <a href="catalogo.html#makita">Makita</a>
+                    <a href="catalogo.html#dewalt">DeWalt</a>
                 </div>
             </div>
 
-            <a href="#"><button>Contacto</button></a>
+             <a href="contacto.html"><button>Contacto</button></a>
         </nav>
 
     </header>
 
     <div class="marca-logo">
-        <img src="imagenes/logo-milwaukee.jpg" alt="Logo Milwaukee">
+        <img src="imagenes/milwaukee/logo-milwaukee.jpg" alt="Logo Milwaukee">
     </div>
 
     <div class="texto-tipo">
@@ -230,49 +225,51 @@
     </div>
     <section id="milwaukee"></section>
     <section class="catalogo">
-        <!-- Impacto-->
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/milwaukee/herramienta1.png" alt="Producto 1">
+
+        <!--Herramientas de impacto, catalogo-->
+        
+        <div class="producto">
+            <img onclick="location.href='compra1.html'" src="imagenes/milwaukee/herramienta1.png">
             <h3>Llave de impacto</h3>
             <p>Máximo control y torque preciso, asegurando ajustes confiables en cualquier entorno de trabajo.</p>
             <div class="acciones">
                 <span class="precio">$3,500 MXN</span>
-                <button>Comprar</button>
+                <button onclick="location.href='compra1.html'">Comprar</button>
             </div>
         </div>
 
-        <div class="producto" onclick="location.href='milwaukee/producto2.html'">
-            <img src="imagenes/milwaukee/herramienta2.png" alt="Producto 2">
+        <div class="producto">
+            <img onclick="location.href='compra2.html'" src="imagenes/milwaukee/herramienta2.png">
             <h3>Llave de impacto</h3>
             <p>Ofrece hasta 550 ft-lb de torque y 3,000 RPM para extracciones difíciles. Diseño ligero de 2.2 lb.</p>
             <div class="acciones">
                 <span class="precio">$3,500 MXN</span>
-                <button>Comprar</button>
+                <button onclick="location.href='compra2.html'">Comprar</button>
             </div>
         </div>
 
-        <div class="producto" onclick="location.href='milwaukee/producto3.html'">
-            <img src="imagenes/milwaukee/herramienta3.png" alt="Producto 3">
+        <div class="producto">
+            <img onclick="location.href='compra3.html'" src="imagenes/milwaukee/herramienta3.png">
             <h3>Llave de impacto</h3>
             <p>Potente motor sin escobillas, con 1,750 RPM y 2,000 IPM para máxima productividad y anclaje eficiente.
             </p>
             <div class="acciones">
                 <span class="precio">$2,800 MXN</span>
-                <button>Comprar</button>
+                <button onclick="location.href='compra3.html'">Comprar</button>
             </div>
         </div>
 
-        <div class="producto" onclick="location.href='milwaukee/producto4.html'">
-            <img src="imagenes/milwaukee/herramienta4.png" alt="Producto 4">
+        <div class="producto">
+            <img onclick="location.href='compra4.html'" src="imagenes/milwaukee/herramienta4.png">
             <h3>Llave de impacto</h3>
             <p>Motor sin escobillas, con 1,750 RPM y 2,000 IPM. Rendimiento ideal en tareas exigentes.</p>
             <div class="acciones">
                 <span class="precio">$2,400 MXN</span>
-                <button>Comprar</button>
+                <button onclick="location.href='compra4.html'">Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto4.html'">
-            <img src="imagenes/milwaukee/herramienta5.png" alt="Producto 5">
+        <div class="producto">
+            <img src="imagenes/milwaukee/herramienta5.png">
             <h3>Llave de impacto mango en D</h3>
             <p>Llave de impacto con mango en D, motor sin escobillas y hasta 2,000 ft-lb de torque. Potencia máxima para
                 trabajos pesados.</p>
@@ -281,8 +278,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto4.html'">
-            <img src="imagenes/milwaukee/herramienta6.png" alt="Producto 6">
+        <div class="producto">
+            <img src="imagenes/milwaukee/herramienta6.png">
             <h3>Trinquete de 3/8</h3>
             <p>Trinquete de 3/8” con cuello extendido y perfil delgado. Ofrece hasta 35 ft-lb de torque y alta velocidad
                 para trabajar en espacios reducidos.</p>
@@ -291,8 +288,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto4.html'">
-            <img src="imagenes/milwaukee/herramienta7.png" alt="Producto 7">
+        <div class="producto">
+            <img src="imagenes/milwaukee/herramienta7.png">
             <h3>Destornillador de impacto hexagonal</h3>
             <p>Destornillador de impacto 1/4” compacto y potente. La mejor relación potencia-tamaño en su clase.</p>
             <div class="acciones">
@@ -300,8 +297,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto4.html'">
-            <img src="imagenes/milwaukee/herramienta8.png" alt="Producto 8">
+        <div class="producto">
+            <img src="imagenes/milwaukee/herramienta8.png">
             <h3>Llave de torque digital M12 FUEL™ de 1/2"o</h3>
             <p>Llave de torque digital 1/2” con motor y ONE-KEY™. Ofrece precisión, control y hasta 50% más velocidad en
                 la instalación.</p>
@@ -316,8 +313,8 @@
         <h1>HERRAMIENTAS DE PERFORACI&Oacute;N</h1>
     </div>
     <section class="catalogo">
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/milwaukee/herramienta9.png" alt="Producto 1">
+        <div class="producto">
+            <img src="imagenes/milwaukee/herramienta9.png">
             <h3>Taladro percutor/destornillador compacto</h3>
             <p>Taladro percutor 1/2” compacto y sin escobillas. Ofrece 50% más tiempo de operación que modelos con
                 escobillas.</p>
@@ -326,8 +323,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/milwaukee/herramienta10.png" alt="Producto 1">
+        <div class="producto">
+            <img src="imagenes/milwaukee/herramienta10.png">
             <h3>Kit de taladro magnético de 1-1/2"</h3>
             <p>El taladro magnético M18 FUEL™ perfora más rápido, ofrece el mejor agarre magnético y taladra más de 40
                 agujeros por carga.</p>
@@ -336,8 +333,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/milwaukee/herramienta11.png" alt="Producto 1">
+        <div class="producto">
+            <img src="imagenes/milwaukee/herramienta11.png">
             <h3>Taladro percutor/destornillador de ½”</h3>
             <p>El taladro M18 FUEL™ de ½” con ONE KEY™ es el más potente de su clase, compacto y con control AutoStop™
                 para mayor seguridad al perforar materiales densos.</p>
@@ -346,38 +343,37 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/milwaukee/herramienta12.png" alt="Producto 1">
+        <div class="producto">
+            <img src="imagenes/milwaukee/herramienta12.png">
             <h3>Taladro percutor de 1/2"</h3>
             <p>Este taladro es el más ligero y compacto de su clase, con 1700 RPM y 350 pulg.-lb de torque. Motor sin
                 escobillas, alto rendimiento en solo 2.3 lb, ideal para trabajos en altura.</p>
             <div class="acciones">
                 <span class="precio">$3,500 MXN</span>
-                <button>Comprar</button>
+                <button id="makita" >Comprar</button>
             </div>
         </div>
-        <!-- Makita -->
-
     </section>
+    <!-- Makita -->
     <div class="marca-logo">
-        <img id="makita" src="imagenes/logo-makita.jpg" alt="Logo Milwaukee">
+        <img id="makita" src="imagenes/makita/logo-makita.jpg" alt="Logo Milwaukee">
     </div>
     <div class="texto-tipo">
         <h1>HERRAMIENTAS DE IMPACTO</h1>
     </div>
     <section class="catalogo">
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta1.png" alt="Producto 1">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta1.png">
             <h3>Llave de Impacto de 1/2"</h3>
-            <p>Llave de impacto sin escobillas Makita. Ofrece hasta 960 ft-lb de torque, 3 niveles de
+            <p>Llave de impacto sin escobillas Makita. Ofrece hasta 960 ft-lb de torque, 3 niveles de
                 potencia y control preciso para tareas exigentes.</p>
             <div class="acciones">
                 <span class="precio">$2,500 MXN</span>
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta2.png" alt="Producto 2">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta2.png">
             <h3>Destornillador de Impacto</h3>
             <p>Destornillador de impacto Makita sin escobillas. Ofrece hasta 1,590 in-lb de torque,
                 3,600 RPM y modos asistidos para mayor precisión y control.</p>
@@ -386,8 +382,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta3.png" alt="Producto 3">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta3.png">
             <h3>Matraca Cuadrada de 3/8</h3>
             <p>Trinquete Makita con yunques intercambiables 3/8" y 1/4",
                 motor de 35 ft-lb de torque y 800 RPM. Compacto y ideal para espacios reducidos.</p>
@@ -396,8 +392,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta4.png" alt="Producto 4">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta4.png">
             <h3>Llave de Impacto de 3/8</h3>
             <p>Llave de impacto compacta Makita, 130 ft-lb de torque y 230 ft-lb de apriete.
                 Ideal para espacios reducidos y trabajos en altura.</p>
@@ -406,8 +402,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta5.png" alt="Producto 5">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta5.png">
             <h3>Atornillador de Impacto Sub Compact</h3>
             <p>Atornillador compacto Makita con 1,240 in-lb de torque,
                 dos velocidades variables y Modo Asistido para mayor precisión en el apriete.</p>
@@ -416,8 +412,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta6.png" alt="Producto 6">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta6.png">
             <h3>Atornillador Angular de Impacto</h3>
             <p>Taladro angular compacto Makita con 530 in-lb de torque,
                 luz LED integrada y diseño ergonómico ideal para espacios reducidos.</p>
@@ -426,8 +422,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta7.png" alt="Producto 7">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta7.png">
             <h3>Juego de Llave de Impacto de 1/2</h3>
             <p>Llave de impacto Makita con 960 ft-lb de torque, 3 modos de potencia, agarre cómodo
                 y kit completo con baterías, cargador y maleta.</p>
@@ -436,8 +432,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta8.png" alt="Producto 8">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta8.png">
             <h3>Juego Combinado de 3 Pz.</h3>
             <p>Kit Makita de tabla-roca con atornillador, cortadora e impacto. Hasta 4,000 RPM y
                 1,460 in-lb de torque. Incluye 2 baterías, cargador y maleta.</p>
@@ -453,8 +449,8 @@
         </div>
         <section class="catalogo">
         
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta9.png" alt="Producto 9">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta9.png">
             <h3>Taladro Atornillador de 1/2</h3>
             <p>Taladro atornillador Makita sin escobillas de 970 in-lb de torque. Compacto, 
                 con 2 velocidades y portabrocas metálico de 1/2". Solo herramienta.</p>
@@ -463,8 +459,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta10.png" alt="Producto 4">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta10.png">
             <h3>Taladro Atornillador de 1/2</h3>
             <p>Taladro atornillador Makita sin escobillas con 1,250 in-lb de torque. 
                 Compacto, con 2 velocidades y portabrocas metálico. Solo herramienta.</p>
@@ -473,8 +469,8 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta11.png" alt="Producto 5">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta11.png">
             <h3>Rotomartillo de 7/8</h3>
             <p>Motor Makita con 1,200 RPM y 4,000 BPM. 3 modos de operación y mango absorbente de impactos. 
                 Pesa 7.7 lbs (sin batería) y solo incluye la herramienta.</p>
@@ -483,11 +479,100 @@
                 <button>Comprar</button>
             </div>
         </div>
-        <div class="producto" onclick="location.href='milwaukee/producto1.html'">
-            <img src="imagenes/makita/herramienta12.png" alt="Producto 6">
+        <div class="producto">
+            <img src="imagenes/makita/herramienta12.png">
             <h3>Rotomartillo Advanced AVT de 1 9/16</h3>
             <p>Motor sin escobillas con 8.4 ft-lbs de impacto. AFT® detiene el motor ante bloqueos. 
                 AWS® permite control inalámbrico con extractor. AVT® reduce vibración. Incluye mango, calibre y estuche.</p>
+            <div class="acciones">
+                <span class="precio">$3,500 MXN</span>
+                <button id="dewalt" >Comprar</button>
+            </div>
+        </div>
+    </section>
+    <!-- DeWalt -->
+    <div class="marca-logo">
+        <img src="imagenes/dewalt/logo-dewalt.png">
+    </div>
+    <div class="texto-tipo">
+        <h1>SIERRAS / CORTADORAS</h1>
+    </div>
+    <section class="catalogo">
+        <div class="producto">
+            <img src="imagenes/dewalt/herramienta1.png">
+            <h3>Kit de Sierra Circular de 7-1/4" (184mm)</h3>
+            <p>Sierra circular inalámbrica de 7-1/4" 60V MAX\*. Hasta 29% más poder con batería de 9 Ah. 
+                Tecnología FLEXVOLT® para mayor potencia y duración sin cable.</p>
+            <div class="acciones">
+                <span class="precio">$2,500 MXN</span>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="producto">
+            <img src="imagenes/dewalt/herramienta2.png">
+            <h3>Sierra caladora 600 Watts con acción pendular</h3>
+            <p>Motor de 600W con velocidad variable de 0-3100 cpm para potencia y control. 
+                Interruptor ajustable y acción orbital de 4 posiciones para cortes versátiles.</p>
+            <div class="acciones">
+                <span class="precio">$3,500 MXN</span>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="producto">
+            <img src="imagenes/dewalt/herramienta3.png">
+            <h3>Sierra Circular de 5-3/8" (136mm)</h3>
+            <p>Motor sin escobillas de alto rendimiento para cortes eficientes. 
+                Hoja de 5-3/8" con hasta 1-3/4" de profundidad a 90°. Incluye gancho para vigas para fácil almacenamiento.</p>
+            <div class="acciones">
+                <span class="precio">$2,500 MXN</span>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="producto">
+            <img src="imagenes/dewalt/herramienta4.png">
+            <h3>Sierra de banco 10" @ 254mm - 1800 Watts</h3>
+            <p>Sierra de banco de 10" y 1800W, ideal para cortes precisos en madera y plásticos. 
+                Potente y versátil, perfecta para carpintería profesional y bricolaje.</p>
+            <div class="acciones">
+                <span class="precio">$2,600 MXN</span>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="producto">
+            <img src="imagenes/dewalt/herramienta5.png">
+            <h3>Sierra Ingletadora Deslizante de Doble Bisel de 12" (305mm)</h3>
+            <p>Funciona con batería 60V MAX\* para tareas exigentes. Hasta 675 cortes en molduras MDF y 255 en madera 4x4. 
+                Tecnología CUT.CAPTURE.CHARGE™ extiende el uso con frenado regenerativo.</p>
+            <div class="acciones">
+                <span class="precio">$1,900 MXN</span>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="producto">
+            <img src="imagenes/dewalt/herramienta6.png">
+            <h3>Sierra Ingleteadora de 10" (254mm) de 1600W de Un Bisel</h3>
+            <p>Placa de acero inoxidable con 14 paradas positivas. 
+                Guía alta soporta bases de hasta 4-1/4" verticalmente. Corta madera de 2"x6" a 90° y 2"x4" a 45°.</p>
+            <div class="acciones">
+                <span class="precio">$3,500 MXN</span>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="producto">
+            <img src="imagenes/dewalt/herramienta7.png">
+            <h3>Cortadora de Metal/Sierra de 14" (355mm) 2300W</h3>
+            <p>Mango ergonómico en "D" reduce fatiga y mejora la productividad. 
+                Motor de 2300 W con protección contra sobrecarga. Prensa de ajuste rápido para sujetar distintos materiales.</p>
+            <div class="acciones">
+                <span class="precio">$3,500 MXN</span>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="producto">
+            <img src="imagenes/dewalt/herramienta8.png">
+            <h3>Sierra de Banda 1-3/4" Inalámbrica 20V</h3>
+            <p>Listo para TOOL CONNECT™ (chip no incluido) para rastreo y personalización vía app. 
+                Gatillo y velocidad variable para distintas aplicaciones. Compatible con LANDYARD READY™ para trabajar seguro en altura.</p>
             <div class="acciones">
                 <span class="precio">$3,500 MXN</span>
                 <button>Comprar</button>

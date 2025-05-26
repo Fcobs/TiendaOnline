@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Compra de Producto</title>
+    <style>
+        body {
+            font-family: 'Anton', sans-serif;
+            margin: 0;
+            background-image: url('imagenes/fondo1.png');
+            text-align: center;
+        }
+        
+        .logo {
+            height: 80px;
+        }
+
+        .principal {
+            position: sticky;
+            top: 0;
+            background-color: #c42727;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav button {
+            background-color: #c42727;
+            color: white;
+            border: 2px solid transparent;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-family: 'Anton', sans-serif;
+            font-size: 25px;
+
+
+        }
+
+        nav button:hover {
+
+            border: 2px solid white;
+        }
+        .desplegable {
+            position: relative;
+            display: inline-block;
+        }
+
+        .desplegable-opciones {
+            display: none;
+            position: absolute;
+            background-color: #c42727;
+            min-width: 160px;
+            z-index: 1001;
+            top: 100%;
+            left: 0;
+            flex-direction: column;
+            border: 2px solid white;
+        }
+
+        .desplegable-opciones a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            font-family: 'Anton', sans-serif;
+        }
+
+        .desplegable-opciones a:hover {
+            background-color: #a02020;
+        }
+
+        .desplegable:hover .desplegable-opciones {
+            display: block;
+        }
+
+        .compra-cont {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .compra-cont img {
+            max-width: 30%;
+            border-radius: 8px;
+        }
+
+        .compra-cont .precio {
+            font-size: 1.5rem;
+            color: #c42727;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .compra-cont button {
+            background-color: #c42727;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .compra-cont button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="principal">
+        <img src="imagenes/logo.png" alt="Logo de la tienda" class="logo">
+        <nav>
+            <a href="index.html"><button>Inicio</button></a>
+            <a href="pgInicio.html"><button>Iniciar Sesi&oacute;n</button></a>
+
+            <div class="desplegable">
+                <button onclick="location.href='catalogo.html'">Cat&aacute;logo ▼</button>
+                <div class="desplegable-opciones">
+                    <a href="catalogo.html">Milwaukee</a>
+                    <a href="#makita">Makita</a>
+                    <a href="#dewalt">DeWalt</a>
+                </div>
+            </div>
+
+            <a href="#"><button>Contacto</button></a>
+        </nav>
+
+    </header>
+    <div class="compra-cont">
+        
+    <h3>Compra de producto</h3>
+        <img src="imagenes/milwaukee/herramienta4.png" alt="Producto">
+        <h2>Herramienta de Impacto Milwaukee</h2>
+        <h3>Motor sin escobillas, con 1,750 RPM y 2,000 IPM. Rendimiento ideal en tareas exigentes.</h3>
+        <p class="precio">$2,400</p>
+        <a href="confirmar.html"><button>Confirmar Compra</button></a>
+    </div>
+
+</body>
+
+</html>
