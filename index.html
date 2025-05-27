@@ -8,10 +8,14 @@
   <meta charset="UTF-8">
   <title>Tienda Online</title>
   <style>
+    * {
+  box-sizing: border-box;
+}
     body {
       margin: 0;
       font-family: 'Anton', sans-serif;
       background-color: #000; 
+      overflow-x: hidden;
     }
 
     header {
@@ -91,13 +95,14 @@
     }
    
        .texto-central3 {
-      font-size: 5rem;
+      font-size: 3rem;
       color: white;
       background-color: rgba(0,0,0,0.6);
-      padding: 40px 70px;
+      padding: 30px 80px;
       border-radius: 45px;
       text-align: center;
-       margin-left: 80px;
+       margin-left: auto;
+       margin-right: auto; 
     }
 
     .boton-rojo {
@@ -185,8 +190,8 @@
    display: flex;
   justify-content: center;   
   align-items: center;       
-  gap: 20px;
-  padding: 150px;
+  gap: 10px;
+  padding: 50px;
   }
    .catalogo2 {
     display: grid;
@@ -233,8 +238,9 @@
   .producto img {
    display: block;
    margin: 0 auto;
-   max-width: 500px; 
+   max-width: 100%; 
    padding: 20px 0; 
+   height: auto;
 
   }
 
@@ -301,7 +307,7 @@
 
 <div class="seccion seccion3">
   <div class="texto-central3">
-    ELIGE TU MARCA FAVORITA!
+    ¡ELIGE TU MARCA FAVORITA!
   </div>
   <div class="catalogo1">
     <div class="producto1">
@@ -378,16 +384,16 @@
     
   
     <div style="margin: 15px 0;">
-      <a href="https://www.facebook.com/TorqueParts" target="_blank" style="color: white; margin: 0 10px;">
+      <a href="https://www.facebook.com/TorqueParts" target="_blank" style="color: white; margin: 0 10px;text-decoration: none;">
         <i class="fa-brands fa-facebook"></i>
       </a>
-      <a href="https://www.instagram.com/" target="_blank" style="color: white; margin: 0 10px;">
+      <a href="https://www.instagram.com/" target="_blank" style="color: white; margin: 0 10px;text-decoration: none;">
         <i class="fa-brands fa-instagram"></i>
       </a>
-      <a href="https://discord.com/" style="color: white; margin: 0 10px;">
+      <a href="https://discord.com/" style="color: white; margin: 0 10px;text-decoration: none;">
         <i class="fa-brands fa-discord"></i>
       </a>
-      <a href="https://github.com/Fcobs/TiendaOnline" target="_blank" style="color: white; margin: 0 10px;">
+      <a href="https://github.com/Fcobs/TiendaOnline" target="_blank" style="color: white; margin: 0 10px;text-decoration: none;">
         <i class="fa-brands fa-github"></i>
       </a>
       <a href="https://wa.me/5211234567890" target="_blank" style="color: white; margin: 0 10px;">
@@ -398,7 +404,7 @@
    
     <div style="margin-bottom: 10px;">
       <a href="index.html" style="color: white; margin: 0 10px; text-decoration: none;">Inicio</a>
-      <a href="catalogo.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">catalogo</a>
+      <a href="catalogo.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Catálogo</a>
       <a href="contacto.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Contacto</a>
     </div>
 
@@ -408,5 +414,4 @@
 </footer>
 </div>
 </body>
-
 </html>
